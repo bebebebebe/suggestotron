@@ -3,18 +3,21 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 
 <% @topics.each do |topic| %>
   <tr>
-    <td><%= topic.title %></td>
-    <td><%= topic.description %></td>
-    <tc><%= pluralize(topic.votes.count, "vote") %></td>
+    <td><%= link_to topic.title, topic %></td>
+    
     <td><%= button_to '+1', votes_path(topic_id: topic.id), method: :post %></td>
+
+    <tc><%= pluralize(topic.votes.count, "vote") %></td>
+
     <td><%= link_to 'Show', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
     <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?', 
