@@ -1,3 +1,7 @@
 == up/down voter
 
-Based on RailsBridge workshop tutorial: you can add/delete topics to a list, and vote on them. I've added some extra features: topics can also be voted down, and topics are ordered by votes.
+Based on RailsBridge workshop tutorial: you can add/delete topics to a list, and vote on them. I've added some extra features: 
+
+- topics can also be voted down, 
+- topics are ordered by votes, and
+- when a topic is destroyed, its votes are removed from the votes database.
